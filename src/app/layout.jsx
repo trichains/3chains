@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: '3Chains',
+  title: '3chains',
   description: 'Blog pessoal com Next.js, TailwindCSS e Contentlayer'
 };
 
