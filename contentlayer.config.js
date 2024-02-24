@@ -8,7 +8,7 @@ const Blog = defineDocumentType(() => ({
       type: 'string',
       require: true
     },
-    publishAt: {
+    publishedAt: {
       type: 'date',
       required: true
     },
