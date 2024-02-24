@@ -1,7 +1,6 @@
 import { sortBlogs } from '@/src/utils';
 import BlogLayoutOne from '../Blog/BlogLayoutOne';
 import BlogLayoutTwo from '../Blog/BlogLayoutTwo';
-import BlogLayoutThree from '../Blog/BlogLayoutThree';
 
 const FeaturePosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
@@ -9,7 +8,7 @@ const FeaturePosts = ({ blogs }) => {
   return (
     <section className="w-full mt-32 px-32 flex flex-col items-center justify-center">
       <h2 className="w-full inline-block capitalize text-4xl">
-        <span className="text-accent font-bold">Últimas</span> postagens
+        <span className="text-accent font-bold">Destaque</span> do mês
       </h2>
 
       <div className="grid grid-cols-2 grid-rows-2 gap-6 mt-16">
