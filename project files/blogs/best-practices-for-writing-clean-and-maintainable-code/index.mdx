@@ -1,0 +1,219 @@
+---
+title: 'Melhores Práticas para Escrever Código Limpo e Manutenível'
+description: Como implantar seus aplicativos Next.js na Vercel.
+image: '../../public/blogs/roman-synkevych-vXInUOv1n84-unsplash.jpg'
+publishedAt: '2023-01-02'
+updatedAt: '2023-01-02'
+author: 'trichains'
+isPublished: true
+tags:
+  - qualidade de código
+---
+
+Até agora, tentar estilizar um artigo, documento ou postagem de blog com Tailwind tem sido uma tarefa tediosa que exigia um olhar atento para a tipografia e muito CSS personalizado complexo.
+
+Por padrão, o Tailwind remove todos os estilos padrão do navegador de parágrafos, títulos, listas e mais. Isso acaba sendo realmente útil para construir interfaces de usuário de aplicativos porque você gasta menos tempo desfazendo os estilos do usuário, mas quando você _realmente está_ tentando estilizar algum conteúdo que veio de um editor de texto rico em um CMS ou um arquivo markdown, pode ser surpreendente e não intuitivo.
+
+Recebemos muitas reclamações sobre isso, com as pessoas frequentemente nos perguntando coisas como:
+
+> Por que o Tailwind está removendo os estilos padrão dos meus elementos `h1`? Como desabilito isso? O que você quer dizer com perder todos os outros estilos básicos também?
+> Ouvimos você, mas não estamos convencidos de que simplesmente desativar nossos estilos básicos seja o que você realmente quer. Você não quer ter que remover margens irritantes toda vez que usa um elemento `p` em um painel da sua interface de usuário. E duvido que você realmente queira que suas postagens de blog usem os estilos do usuário também — você quer que elas pareçam _incríveis_, não horríveis.
+
+O plugin `@tailwindcss/typography` é nossa tentativa de dar a você o que você _realmente_ quer, sem nenhum dos inconvenientes de fazer algo estúpido como desativar nossos estilos básicos.
+
+Ele adiciona uma nova classe `prose` que você pode aplicar a qualquer bloco de conteúdo HTML puro e transformá-lo em um documento bonito e bem formatado:
+
+```html
+<article className="prose">
+  <h1>Pão de alho com queijo: O que a ciência nos diz</h1>
+  <p>
+    Por anos, os pais têm defendido os benefícios para a saúde de comer pão de
+    alho com queijo para seus filhos, com a comida alcançando um status icônico
+    em nossa cultura a ponto de as crianças muitas vezes se vestirem como um pão
+    quentinho e queijo para o Halloween.
+  </p>
+  <p>
+    Mas um estudo recente mostra que o famoso aperitivo pode estar ligado a uma
+    série de casos de raiva surgindo pelo país.
+  </p>
+</article>
+```
+
+Para obter mais informações sobre como usar o plugin e os recursos que ele inclui, [leia a documentação](https://github.com/tailwindcss/typography/blob/master/README.md).
+
+---
+
+### O que esperar daqui para frente
+
+O que se segue a partir daqui é apenas um monte de absurdo que escrevi para testar o próprio plugin. Ele inclui todos os elementos tipográficos sensatos que eu poderia pensar, como **texto em negrito**, listas não ordenadas, listas ordenadas, blocos de código, citações em bloco e até _itálicos_.
+
+É importante cobrir todos esses casos de uso por algumas razões:
+
+1. Queremos que tudo pareça bom desde o início.
+2. Realmente, apenas a primeira razão, esse é o ponto principal do plugin.
+3. Aqui está uma terceira razão fictícia, embora uma lista com três itens pareça mais realista do que uma lista com dois itens.
+
+Agora vamos experimentar outro estilo de cabeçalho.
+
+### A tipografia deve ser fácil
+
+Então, isso é um cabeçalho para você — com sorte, se fizemos nosso trabalho corretamente, isso parecerá bastante razoável.
+
+Algo que uma pessoa sábia me disse sobre tipografia é:
+
+> A tipografia é bastante importante se você não quiser que suas coisas pareçam lixo. Faça isso bem e não será ruim.
+
+Provavelmente, é importante que as imagens também pareçam boas aqui por padrão:
+
+```jsx
+<Image
+  src="/blogs/c-d-x-PDX_a_82obo-unsplash.jpg"
+  width="718"
+  height="404"
+  alt="Imagem"
+  sizes="100vw"
+/>
+```
+
+Contrariamente ao que se pensa comumente, Lorem Ipsum não é simplesmente um texto aleatório. Ele tem raízes em uma peça da literatura latina clássica de 45 a.C., tornando-o com mais de 2000 anos.
+
+Agora vou te mostrar um exemplo de uma lista não ordenada para garantir que ela fique boa também:
+
+- Então aqui está o primeiro item nesta lista.
+- Neste exemplo, estamos mantendo os itens curtos.
+- Mais tarde, usaremos itens de lista mais longos e complexos.
+
+E esse é o fim desta seção.
+
+## E se empilharmos títulos?
+
+### Devemos garantir que isso também fique bom.
+
+Às vezes, você tem títulos diretamente um abaixo do outro. Nestes casos, você frequentemente precisa desfazer a margem superior no segundo título porque geralmente fica melhor para os títulos estarem mais próximos do que um parágrafo seguido por um título deveria ser.
+
+### Quando um título vem depois de um parágrafo...
+
+Quando um título vem depois de um parágrafo, precisamos de um pouco mais de espaço, como já mencionei acima. Agora vamos ver como ficaria uma lista mais complexa.
+
+- **Eu costumo fazer esta coisa onde os itens da lista têm títulos.**
+
+  Por alguma razão, acho que isso parece legal, o que é lamentável porque é bastante irritante acertar os estilos.
+
+  Eu costumo ter dois ou três parágrafos nesses itens de lista, também, então a parte difícil é conseguir o espaçamento entre os parágrafos, título do item da lista e itens de lista separados para fazerem sentido. Bastante difícil, sinceramente, você poderia argumentar fortemente que você simplesmente não deveria escrever assim.
+
+- **Já que esta é uma lista, preciso de pelo menos dois itens.**
+
+  Eu expliquei o que estou fazendo já no item de lista anterior, mas uma lista não seria uma lista se tivesse apenas um item, e realmente queremos que isso pareça realista. Por isso, adicionei este segundo item de lista para ter algo para olhar ao escrever os estilos.
+
+- **Não é uma má ideia adicionar um terceiro item também.**
+
+  Acho que provavelmente teria sido bom usar apenas dois itens, mas três definitivamente não é pior, e como parece que não estou tendo dificuldade em inventar coisas arbitrariamente, posso muito bem incluir.
+
+Após esse tipo de lista, costumo ter uma declaração ou parágrafo de encerramento, porque meio que parece estranho pular diretamente para um título.
+
+## O código deve parecer bom por padrão.
+
+Acredito que a maioria das pessoas vai usar [highlight.js](https://highlightjs.org/) ou [Prism](https://prismjs.com/) ou algo assim se quiserem estilizar seus blocos de código, mas não custa nada fazer com que eles fiquem _razoáveis_ desde o início, mesmo sem destaque de sintaxe.
+
+Aqui está como fica um arquivo `tailwind.config.js` padrão no momento da escrita:
+
+```jsx
+module.exports = {
+  purge: [],
+  theme: {
+    extend: {}
+  },
+  variants: {},
+  plugins: []
+};
+```
+
+Espero que isso pareça bom para você.
+
+### E quanto a listas aninhadas?
+
+Listas aninhadas geralmente parecem ruins, é por isso que editores como o Medium nem permitem fazer isso, mas eu acho que, já que alguns de vocês vão fazer isso de qualquer maneira, temos que carregar o fardo de pelo menos fazer funcionar.
+
+1.  **Listas aninhadas raramente são uma boa ideia.**
+    - Você pode sentir que está sendo realmente "organizado" ou algo assim, mas está apenas criando uma forma grosseira na tela que é difícil de ler.
+    - Navegação aninhada em interfaces do usuário também é uma má ideia, mantenha as coisas o mais planas possível.
+    - Aninhar toneladas de pastas no seu código-fonte também não é útil.
+2.  **Já que precisamos ter mais itens, aqui está mais um.**
+    - Não tenho certeza se vamos nos incomodar em estilizar mais do que dois níveis de profundidade.
+    - Dois já são demais, três é garantido ser uma má ideia.
+    - Se você aninhar quatro níveis de profundidade, pertence à prisão.
+3.  **Dois itens não são realmente uma lista, três são bons.**
+    - Novamente, por favor, não aninhe listas se quiser que as pessoas realmente leiam seu conteúdo.
+    - Ninguém quer ver isso.
+    - Estou chateado por termos que nos incomodar em estilizar isso.
+
+A coisa mais irritante sobre listas em Markdown é que os elementos `<li>` não recebem uma tag `<p>` filho, a menos que haja vários parágrafos no item da lista. Isso significa que eu tenho que me preocupar em estilizar essa situação irritante também.
+
+- **Por exemplo, aqui está outra lista aninhada.**
+
+  Mas desta vez com um segundo parágrafo.
+
+  - Esses itens de lista não terão tags `<p>`
+  - Porque eles têm apenas uma linha cada
+
+- **Mas neste segundo item de lista de nível superior, eles terão.**
+
+  Isso é especialmente irritante por causa do espaçamento neste parágrafo.
+
+  - Como você pode ver aqui, porque adicionei uma segunda linha, este item de lista agora tem uma tag `<p>`.
+
+    Esta é a segunda linha da qual estou falando, a propósito.
+
+  - Finalmente, aqui está outro item de lista, então é mais como uma lista.
+
+- Um item de lista de fechamento, mas sem lista aninhada, porque não?
+
+E finalmente, uma frase para encerrar esta seção.
+
+## Há outros elementos que precisamos estilizar
+
+Quase esqueci de mencionar links, como [este link para o site do Tailwind CSS](https://tailwindcss.com). Quase fizemos eles azuis, mas isso é coisa do passado, então escolhemos cinza escuro, parece mais ousado.
+
+Nós até incluímos estilos de tabela, confira:
+
+| Lutador                 | Origem       | Finalizador        |
+| ----------------------- | ------------ | ------------------ |
+| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
+| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
+| Randy Savage            | Sarasota, FL | Elbow Drop         |
+| Vader                   | Boulder, CO  | Vader Bomb         |
+| Razor Ramon             | Chuluota, FL | Razor's Edge       |
+
+Também precisamos garantir que o código em linha fique bom, como se eu quisesse falar sobre elementos `<span>` ou contar as boas novas sobre `@tailwindcss/typography`.
+
+### Às vezes eu até uso `code` em títulos
+
+Mesmo que seja provavelmente uma má ideia, e historicamente eu tive dificuldade em fazer isso parecer bom. No entanto, o truque de _"envolver os blocos de código entre crases"_ funciona muito bem, na verdade.
+
+Outra coisa que já fiz no passado é colocar uma tag `code` dentro de um link, como se eu quisesse contar sobre o repositório [`tailwindcss/docs`](https://github.com/tailwindcss/docs). Eu não gosto que haja um sublinhado abaixo das crases, mas definitivamente não vale a loucura que seria necessária para evitá-lo.
+
+#### Ainda não usamos um `h4`
+
+Mas agora usamos. Por favor, não use `h5` ou `h6` no seu conteúdo, o Medium só suporta dois níveis de títulos por um motivo, seus animais. Eu até considerei usar um pseudo-elemento `before` para gritar com você se você usar `h5` ou `h6`.
+
+Não os estilizamos de forma alguma por padrão porque os elementos `h4` já são tão pequenos que têm o mesmo tamanho que o corpo do texto. O que deveríamos fazer com um `h5`, torná-lo _menor_ que o corpo do texto? Não, obrigado.
+
+### Ainda precisamos pensar em títulos empilhados, porém.
+
+#### Vamos garantir que não estraguemos isso com elementos `h4`, também.
+
+Ufa, com sorte, estilizamos os títulos acima deste texto e eles parecem bastante bons.
+
+Vamos adicionar um parágrafo de encerramento aqui para que as coisas terminem com um bloco de texto decentemente grande. Não consigo explicar por que quero que as coisas terminem dessa maneira, mas tenho que assumir que é porque acho que as coisas parecerão estranhas ou desequilibradas se houver um título muito perto do final do documento.
+
+O que escrevi aqui provavelmente é longo o suficiente, mas adicionar esta frase final não pode prejudicar.
+
+## GitHub Flavored Markdown
+
+Também adicionei suporte para GitHub Flavored Mardown usando `remark-gfm`.
+
+Com `remark-gfm`, obtemos algumas funcionalidades extras em nosso markdown. Por exemplo: literais de autovinculação.
+
+Um link como www.example.com ou https://example.com seria automaticamente convertido em uma tag `a`.
+
+Isso também funciona para links de e-mail: contact@example.com.
