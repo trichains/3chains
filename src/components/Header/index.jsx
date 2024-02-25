@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
   return (
-    <header className="w-full p-4 px-10 flex items-center justify-between bg-headerBg text-white fixed backdrop-blur-md z-50">
+    <header className="w-full p-2 px-10 border-b border-blueGray flex items-center justify-between text-black fixed bg-white z-50">
       <Logo />
       <nav className="w-max py-3 px-8 font-medium capitalize flex items-center">
         <Link href="/" className="mr-2">
@@ -22,11 +22,11 @@ const Header = () => {
         <Link href="/contact" className="mx-2">
           Contato
         </Link>
-        <button>
+        <button className="ml-2">
           <SunIcon />
         </button>
       </nav>
-      <div>
+      <div className="flex items-center">
         <a
           href="https://www.facebook.com/trichains"
           target="_blank"
@@ -44,7 +44,6 @@ const Header = () => {
           rel="noreferrer"
           className="inline-block w-6 h-6 mr-4">
           <GithubIcon
-            fill="white"
             className={'hover:scale-125 transition-all ease duration-200'}
           />
         </a>

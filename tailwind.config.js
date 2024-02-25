@@ -9,12 +9,13 @@ module.exports = {
     extend: {
       colors: {
         dark: '#171717',
-        headerBg: '#00050D',
+        darkBlue: '#00050D',
         light: '#fff',
-        accent: '#069',
-        textAccent: '#CEF',
+        accent: '#08D',
+        buttonBg: '#069',
         accentDark: '#EEE0B1',
-        gray: '#747474'
+        gray: '#747474',
+        blueGray: '#E4E5E7'
       },
       fontFamily: {
         ms: ['var(--font-ms)'],
