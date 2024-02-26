@@ -1,4 +1,3 @@
-import Tag from '../Elements/Tag';
 import Link from 'next/link';
 import Image from 'next/image';
 import { format } from 'date-fns';
@@ -33,7 +32,7 @@ const BlogLayoutOne = ({ blog }) => {
           </h2>
         </Link>
 
-        <span className="flex items-center text-dark/50 font-medium text-base">
+        <span className="flex items-center text-gray font-medium text-base">
           {format(new Date(blog.publishedAt), "d 'de' MMMM - yyyy ", {
             locale: ptBR
           })}

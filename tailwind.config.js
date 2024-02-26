@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: '#171717',
+        dark: '#19191B',
         darkBlue: '#00050D',
-        light: '#fff',
+        light: '#FBFCFF',
         accent: '#08D',
-        buttonBg: '#069',
-        accentDark: '#EEE0B1',
-        gray: '#747474',
+        accentBg: '#069',
+        accentText: '#E1F0FF',
+        gray: '#747678',
         blueGray: '#E4E5E7'
       },
       fontFamily: {
@@ -23,5 +23,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('@tailwindcss/forms')]
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
 };

@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
   return (
-    <header className="w-full p-2 px-10 border-b border-blueGray flex items-center justify-between text-black fixed bg-white z-50">
+    <header className="w-full p-2 px-10 border-b border-blueGray flex items-center justify-between text-black fixed bg-light z-50">
       <Logo />
       <nav className="w-max py-3 px-8 font-medium capitalize flex items-center">
         <Link href="/" className="mr-2">
