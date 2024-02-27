@@ -16,10 +16,10 @@ const Header = () => {
         <Link href="/" className="mr-2">
           Início
         </Link>
-        <Link href="/about" className="mx-2">
+        <Link href="/sobre" className="mx-2">
           Sobre
         </Link>
-        <Link href="/contact" className="mx-2">
+        <Link href="/contato" className="mx-2">
           Contato
         </Link>
         <button className="ml-2">
