@@ -1,6 +1,7 @@
 import Tag from '../Elements/Tag';
 import Link from 'next/link';
 import Image from 'next/image';
+import { slug } from 'github-slugger';
 
 const BlogLayoutOne = ({ blog }) => {
   return (
@@ -18,7 +19,7 @@ const BlogLayoutOne = ({ blog }) => {
 
       <div className="w-full absolute bottom-0 p-10 z-20">
         <Tag
-          link={`/categorias/${blog.tags[0]}`}
+          link={`/categorias/${slug(blog.tags[0])}`}
           name={blog.tags[0]}
           className="px-6 text-sm py-2"
         />

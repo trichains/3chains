@@ -1,19 +1,26 @@
 import { allBlogs } from '@/.contentlayer/generated';
+import { slug } from 'github-slugger';
 import BlogDetails from '@/src/components/Blog/BlogDetails';
 import RenderMdx from '@/src/components/Blog/RenderMdx';
 import Tag from '@/src/components/Elements/Tag';
 import Image from 'next/image';
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({
+    slug: blog._raw.flattenedPath
+  }));
+}
 
 export default function BlogPage({ params }) {
   const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
 
   return (
     <article>
-      <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
+      <div className="mb-8 text-center relative w-full h-[85vh] bg-dark">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Tag
             name={blog.tags[0]}
-            link={`/categorias/${blog.tags[0]}`}
+            link={`/categorias/${slug(blog.tags[0])}`}
             className="px-6 text-sm py-2"
           />
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-5xl leading-normal relative w-5/6">
@@ -36,11 +43,10 @@ export default function BlogPage({ params }) {
       <div className="grid grid-cols-12 gap-16 mt-8 px-10">
         <div className="col-span-4">
           <details
-            className="border-[1px] border-solid border-dark text-dark rounded-lg p-4 sticky top-20 max-h-[80vh] overflow-hidden overflow-y-auto"
+            className="text-dark rounded-lg p-4 sticky top-20 max-h-[80vh] overflow-hidden overflow-y-auto shadow shadow-dark/40"
             open>
             <summary className="text-lg font-semibold capitalize cursor-pointer">
-              <span className="text-accentBg font-bold">Índice</span> de
-              conteúdo
+              <span className="text-accent font-bold">Índice</span> de conteúdo
             </summary>
             <ul className="mt-4 font-in text-base">
               {blog.toc.map((heading) => {
@@ -62,7 +68,7 @@ export default function BlogPage({ params }) {
                         </span>
                       ) : null}
 
-                      <span className="hover:text-accent hover:underline">
+                      <span className="hover:underline hover:decoration-accent hover:underline-offset-2 transition-all ease duration-300">
                         {heading.text}
                       </span>
                     </a>
