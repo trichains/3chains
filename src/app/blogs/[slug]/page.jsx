@@ -46,7 +46,7 @@ export default function BlogPage({ params }) {
             className="text-dark rounded-lg p-4 sticky top-20 max-h-[80vh] overflow-hidden overflow-y-auto shadow shadow-dark/40"
             open>
             <summary className="text-lg font-semibold capitalize cursor-pointer">
-              <span className="text-accent font-bold">Índice</span> de conteúdo
+              <span className="text-accent font-bold">S</span>umário
             </summary>
             <ul className="mt-4 font-in text-base">
               {blog.toc.map((heading) => {
