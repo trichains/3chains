@@ -8,7 +8,7 @@ const BlogLayoutOne = ({ blog }) => {
     <div className="group grid grid-cols-12 gap-4 items-center text-dark">
       <Link
         href={blog.url}
-        className="col-span-4 h-full rounded-xl overflow-hidden">
+        className="col-span-4 h-full rounded-xl overflow-hidden flex">
         <Image
           src={blog.image.filePath.replace('../public', '')}
           placeholder="blur"
@@ -21,7 +21,7 @@ const BlogLayoutOne = ({ blog }) => {
       </Link>
 
       <div className="col-span-8 w-full">
-        <span className="uppercase text-accent font-semibold text-sm">
+        <span className="uppercase text-accent font-semibold text-sm flex items-center">
           {blog.tags[0]}
         </span>
         <Link href={blog.url} className="inline-block my-1">

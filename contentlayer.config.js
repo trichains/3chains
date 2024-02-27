@@ -4,6 +4,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
+import GithubSlugger from 'github-slugger';
 
 const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -59,12 +60,31 @@ const Blog = defineDocumentType(() => ({
           words: time.words
         };
       }
+    },
+    toc: {
+      type: 'json',
+      resolve: async (doc) => {
+        const regulrExp = /\n(?<flag>#{1,6})\s+(?<content>.+)/g;
+        const slugger = new GithubSlugger();
+        const headings = Array.from(doc.body.raw.matchAll(regulrExp)).map(
+          ({ groups }) => {
+            const flag = groups?.flag;
+            const content = groups?.content;
+
+            return {
+              level:
+                flag?.length == 1 ? 'one' : flag?.length == 2 ? 'two' : 'three',
+              text: content,
+              slug: content ? slugger.slug(content) : undefined
+            };
+          }
+        );
+
+        return headings;
+      }
     }
   }
 }));
-
-const themeFilePath = './themes/bearded-theme-void.json';
-console.log(`Reading theme file from: ${themeFilePath}`);
 
 const codeOptions = {
   theme: 'rose-pine'

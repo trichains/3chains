@@ -8,14 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: '#19191B',
-        darkBlue: '#00050D',
-        light: '#FBFCFF',
-        accent: '#08D',
-        accentBg: '#069',
-        accentText: '#E1F0FF',
-        gray: '#747678',
-        blueGray: '#E4E5E7'
+        dark: '#171617',
+        darkBlue: '#1A1825',
+        light: '#FCFBFF',
+        accent: '#85e',
+        accentBg: '#437',
+        accentText: '#E3D6FF',
+        gray: '#757478',
+        blueGray: '#E5E4E7'
       },
       fontFamily: {
         ms: ['var(--font-ms)'],
