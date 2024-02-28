@@ -20,6 +20,20 @@ module.exports = {
       fontFamily: {
         ms: ['var(--font-ms)'],
         in: ['var(--font-in)']
+      },
+      animation: {
+        levitate: 'levitate 3s ease-in-out infinite',
+        shadowWidth: 'shadowWidth 3s ease-in-out infinite'
+      },
+      keyframes: {
+        levitate: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' }
+        },
+        shadowWidth: {
+          '0%, 100%': { transform: 'scaleX(0.7)' },
+          '50%': { transform: 'scaleX(0.4)' }
+        }
       }
     }
   },
