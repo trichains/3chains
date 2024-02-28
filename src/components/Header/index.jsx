@@ -14,7 +14,7 @@ import { useThemeSwitch } from '../Hooks/useThemeSwitch';
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
   return (
-    <header className="w-full p-2 px-10 border-b border-blueGray flex items-center justify-between text-black fixed bg-light z-50">
+    <header className="w-full p-2 px-10 flex items-center justify-between text-black dark:text-light fixed bg-light dark:bg-darkBlue border-b border-blueGray dark:border-darkGray z-50">
       <Logo />
       <nav className="w-max py-3 px-8 font-medium capitalize flex items-center">
         <Link href="/" className="mr-2">

@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
         className={cx(
           montserrat.variable,
           inter.variable,
-          'font-ms bg-light dark:bg-dark'
+          'font-ms bg-light dark:bg-darkBlue'
         )}>
         <Script id="theme-switcher">
           {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {

@@ -88,7 +88,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="mt-24 w-full relative font-medium border-t border-solid border-light py-6 px-8 flex flex-row items-center justify-between">
+      <div className="mt-24 w-full relative font-medium bg-light dark:bg-darkBlue border-t border-solid border-light dark:border-darkGray text-dark dark:text-light py-6 px-8 flex flex-row items-center justify-between">
         <span className="text-center">
           &copy; 2024 trichains. Todos os direitos reservados.
         </span>
