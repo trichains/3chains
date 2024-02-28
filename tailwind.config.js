@@ -18,6 +18,7 @@ module.exports = {
         accent: '#85e',
         accentDark: '#c4a7e7',
         accentBg: '#252239',
+        accentSurface: '#201d2f',
         accentText: '#E3D6FF'
       },
       fontFamily: {
