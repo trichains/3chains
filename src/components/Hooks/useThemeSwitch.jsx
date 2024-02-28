@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 
 export function useThemeSwitch() {
-  const preferDarkQuery = '( prefers-color-schema: dark )';
-  const storageKey = 'tema';
+  const preferDarkQuery = '(prefers-color-schema:dark)';
+  const storageKey = 'theme';
 
   const toggleTheme = (theme) => {
     if (theme === 'dark') {
@@ -23,11 +23,10 @@ export function useThemeSwitch() {
     return window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light';
   };
 
-  const [mode, setMode] = useState('dark ');
+  const [mode, setMode] = useState('dark');
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
-
     const handleChange = () => {
       const newMode = getUserPreference();
       setMode(newMode);
@@ -38,7 +37,9 @@ export function useThemeSwitch() {
 
     mediaQuery.addEventListener('change', handleChange);
 
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
   }, []);
 
   useEffect(() => {

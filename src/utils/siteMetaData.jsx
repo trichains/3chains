@@ -1,4 +1,3 @@
-// please update required information
 const siteMetadata = {
   title: '3chains - Explorando o Mundo da Programação',
   author: 'trichains',
@@ -6,7 +5,7 @@ const siteMetadata = {
   description:
     'Um blog criado com Next.js, Tailwind.css e Contentlayer para explorar e compartilhar conhecimentos sobre programação e desenvolvimento web.',
   language: 'pt-br',
-  theme: 'system', //
+  theme: 'system',
   siteUrl: 'https://3chains.vercel.app',
   siteLogo: '/avatar.png',
   socialBanner: '/banner.jpg',
