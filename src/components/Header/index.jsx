@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import Logo from './Logo';
 import {
@@ -8,8 +9,10 @@ import {
   SunIcon
 } from './Icons';
 import siteMetadata from '@/src/utils/siteMetaData';
+import { useThemeSwitch } from '../Hooks/useThemeSwitch';
 
 const Header = () => {
+  const [mode, setMode] = useThemeSwitch();
   return (
     <header className="w-full p-2 px-10 border-b border-blueGray flex items-center justify-between text-black fixed bg-light z-50">
       <Logo />
@@ -23,7 +26,9 @@ const Header = () => {
         <Link href="/contato" className="mx-2">
           Contato
         </Link>
-        <button className="ml-2">
+        <button
+          onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+          className="ml-2">
           <SunIcon />
         </button>
       </nav>

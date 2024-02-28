@@ -1,9 +1,10 @@
-import { cx } from '@/src/utils';
 import './globals.css';
+import { cx } from '@/src/utils';
 import { Montserrat, Inter } from 'next/font/google';
 import Header from '@/src/components/Header';
 import Footer from '../components/Footer';
 import siteMetadata from '../utils/siteMetaData';
+import Script from 'next/script';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -58,8 +59,15 @@ export default function RootLayout({ children }) {
         className={cx(
           montserrat.variable,
           inter.variable,
-          'font-ms bg-light '
+          'font-ms bg-light dark:bg-dark'
         )}>
+        <Script id="theme-switcher">
+          {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+            }`}
+        </Script>
         <Header />
         {children}
         <Footer />
