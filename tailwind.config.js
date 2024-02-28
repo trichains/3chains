@@ -23,7 +23,8 @@ module.exports = {
       },
       animation: {
         levitate: 'levitate 3s ease-in-out infinite',
-        shadowWidth: 'shadowWidth 3s ease-in-out infinite'
+        shadowWidth: 'shadowWidth 3s ease-in-out infinite',
+        roll: 'roll 24s linear infinite'
       },
       keyframes: {
         levitate: {
@@ -33,6 +34,10 @@ module.exports = {
         shadowWidth: {
           '0%, 100%': { transform: 'scaleX(0.7)' },
           '50%': { transform: 'scaleX(0.4)' }
+        },
+        roll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' }
         }
       }
     }
