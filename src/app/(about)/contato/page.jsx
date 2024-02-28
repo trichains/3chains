@@ -1,5 +1,11 @@
 import AvatarAnimation from '@/src/components/Contact/AvatarAnimation';
 import ContactForm from '@/src/components/Contact/ContactForm';
+import siteMetadata from '@/src/utils/siteMetaData';
+
+export const metadata = {
+  title: 'Entre em Contato Comigo',
+  description: `Entre em contato comigo através do formulário disponível nesta página ou envie um email para ${siteMetadata.email}`
+};
 
 export default function Contact() {
   return (

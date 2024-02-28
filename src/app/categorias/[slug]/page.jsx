@@ -24,6 +24,18 @@ export async function generateStaticParams() {
   return paths;
 }
 
+export async function generateMetadata({ params }) {
+  return {
+    title:
+      params.slug === 'tudo'
+        ? 'Todos os Artigos'
+        : `Artigos sobre ${params.slug.replaceAll('-', ' ')}`,
+    description: `Saiba mais sobre ${
+      params.slug === 'tudo' ? 'programação' : params.slug
+    } através de nossa coleção de artigos e tutoriais`
+  };
+}
+
 const CategoryPage = ({ params }) => {
   const allCategories = ['tudo'];
 

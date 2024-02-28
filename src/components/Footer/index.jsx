@@ -8,6 +8,7 @@ import {
   LinkedinIcon,
   PortfolioIcon
 } from '../Header/Icons';
+import siteMetadata from '@/src/utils/siteMetaData';
 
 const Footer = () => {
   const {
@@ -48,7 +49,7 @@ const Footer = () => {
 
       <div className="flex items-center mt-8">
         <a
-          href="https://www.facebook.com/trichains"
+          href={siteMetadata.facebook}
           target="_blank"
           rel="noreferrer"
           className="inline-block w-6 h-6 mr-4">
@@ -59,7 +60,7 @@ const Footer = () => {
           />
         </a>
         <a
-          href="https://github.com/trichains"
+          href={siteMetadata.github}
           target="_blank"
           rel="noreferrer"
           className="inline-block w-6 h-6 mr-4 fill-light">
@@ -68,7 +69,7 @@ const Footer = () => {
           />
         </a>
         <a
-          href="https://www.trichains.dev"
+          href={siteMetadata.portfolio}
           target="_blank"
           rel="noreferrer"
           className="inline-block w-6 h-6 mr-4">
@@ -77,7 +78,7 @@ const Footer = () => {
           />
         </a>
         <a
-          href="https://www.linkedin.com/in/trichains/"
+          href={siteMetadata.linkedin}
           target="_blank"
           rel="noreferrer"
           className="inline-block w-6 h-6">
