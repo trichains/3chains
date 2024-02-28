@@ -2,6 +2,8 @@ import { format, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { slug } from 'github-slugger';
 import Link from 'next/link';
+import ViewCounter from './ViewCounter';
+
 
 const BlogDetails = ({ blog, slug: blogSlug }) => {
   return (
@@ -12,8 +14,10 @@ const BlogDetails = ({ blog, slug: blogSlug }) => {
         })}
       </time>
 
-      <span>10 visualizações</span>
-      <div>{blog.readingTime.text}</div>
+      <span className="m-3">
+        <ViewCounter slug={blogSlug} />
+      </span>
+      <div className="m-3">{blog.readingTime.text}</div>
       <Link href={`/categorias/${slug(blog.tags[0])}`} className="m-3">
         # {blog.tags[0]}
       </Link>
