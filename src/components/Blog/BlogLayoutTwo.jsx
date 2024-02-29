@@ -5,10 +5,10 @@ import { ptBR } from 'date-fns/locale';
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="group grid grid-cols-12 gap-4 items-center text-dark">
+    <div className="group grid grid-cols-12 gap-4 items-center text-dark dark:text-light">
       <Link
         href={blog.url}
-        className="col-span-4 h-full rounded-xl overflow-hidden flex">
+        className="col-span-12 lg:col-span-4 h-full rounded-xl overflow-hidden flex">
         <Image
           src={blog.image.filePath.replace('../public', '')}
           placeholder="blur"
@@ -20,19 +20,21 @@ const BlogLayoutOne = ({ blog }) => {
         />
       </Link>
 
-      <div className="col-span-8 w-full">
-        <span className="uppercase text-accent font-semibold text-sm flex items-center">
+      <div className="col-span-12 lg:col-span-8 w-full">
+        <span
+          className="w-full inline-block uppercase text-accent dark:text-accentDark font-semibold text-xs
+        sm:text-sm">
           {blog.tags[0]}
         </span>
         <Link href={blog.url} className="inline-block my-1">
-          <h2 className="font-semibold capitalize text-lg">
+          <h2 className="font-semibold capitalize text-base sm:text-lg">
             <span className="bg-gradient-to-r from-accent/50 to-accent/50 bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
               {blog.title}
             </span>
           </h2>
         </Link>
 
-        <span className="flex items-center text-gray font-medium text-base">
+        <span className="w-full inline-block text-gray font-medium text-xs sm:text-base">
           {format(new Date(blog.publishedAt), "d 'de' MMMM - yyyy ", {
             locale: ptBR
           })}
