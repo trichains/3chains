@@ -25,7 +25,7 @@ const Footer = () => {
         bg-accentSurface text-accentText
         mt-16 m-2 sm:m-0 rounded-2xl sm:rounded-none">
         <h3 className="mt-16 font-medium dark:font-bold capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
-          Histórias Interessantes | Atualizações | Notícias
+          Histórias | Atualizações | Notícias
         </h3>
 
         <p className="mt-5 px-4 text-center w-full sm:w-3/5 dark:font-medium text-sm sm:text-base">
@@ -104,7 +104,7 @@ const Footer = () => {
         border-t border-solid border-light dark:border-darkGray text-dark dark:text-light
         py-6 px-8 flex flex-col md:flex-row items-center justify-between">
         <span className="text-center">
-          &copy; 2024 3chains.
+          &copy; 2024 - 3chains.
           <br />
           Todos os direitos reservados.
         </span>
