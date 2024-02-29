@@ -5,12 +5,14 @@ import {
   FacebookIcon,
   GithubIcon,
   LinkedinIcon,
+  MoonIcon,
   PortfolioIcon,
   SunIcon
 } from './Icons';
 import siteMetadata from '@/src/utils/siteMetaData';
 import { useThemeSwitch } from '../Hooks/useThemeSwitch';
 import { useState } from 'react';
+import { cx } from '@/src/utils';
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
@@ -24,11 +26,18 @@ const Header = () => {
     <header className="fixed w-full top-0 py-2 px-5 sm:px-10 flex flex-row-reverse sm:flex-row items-center justify-between text-blackBlue dark:text-lightText bg-light dark:bg-dark border-b border-lightGray dark:border-darkGray z-50">
       <button
         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-        className="inline-block sm:hidden z-50">
-        <SunIcon />
+        className={cx(
+          'w-6 h-6 ease sm:hidden z-50 flex items-center justify-center rounded-full p-1',
+          mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+        )}>
+        {mode === 'light' ? (
+          <MoonIcon className={'fill-dark'} />
+        ) : (
+          <SunIcon className={'fill-dark'} />
+        )}
       </button>
-      <Logo />
 
+      <Logo />
       {/* icone menu */}
       <button className="inline-block sm:hidden z-50 w-6 h-6" onClick={toggle}>
         <div className="w-6 cursor-pointer transition-all ease duration-300">
@@ -65,7 +74,6 @@ const Header = () => {
           </div>
         </div>
       </button>
-
       {/* navbar no celular */}
       <nav
         className={`absolute left-0 w-[35%] top-0 pt-14 pb-4 bg-dark/90 dark:bg-light/90 text-lightText dark:text-dark backdrop-blur-sm z-0 gap-1 font-medium capitalize sm:hidden flex flex-col items-start justify-center transition-all duration-300 ${
@@ -89,7 +97,6 @@ const Header = () => {
           Contato
         </Link>
       </nav>
-
       <nav className="w-max py-3 px-8 text-dark dark:text-lightText font-medium capitalize hidden sm:flex items-center">
         <Link href="/" className="mr-2">
           Início
@@ -102,8 +109,15 @@ const Header = () => {
         </Link>
         <button
           onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-          className="ml-2">
-          <SunIcon />
+          className={cx(
+            'w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1',
+            mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+          )}>
+          {mode === 'light' ? (
+            <MoonIcon className={'fill-dark'} />
+          ) : (
+            <SunIcon className={'fill-dark'} />
+          )}
         </button>
       </nav>
       <div className="hidden sm:flex items-center">
