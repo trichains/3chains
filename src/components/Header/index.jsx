@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full p-2 px-5 sm:px-10 flex items-center justify-between text-black dark:text-light bg-light dark:bg-darkBlue border-b border-blueGray dark:border-darkGray z-50">
+    <header className="fixed w-full top-0 p-2 px-5 sm:px-10 flex items-center justify-between text-black dark:text-light bg-light dark:bg-darkBlue border-b border-blueGray dark:border-darkGray z-50">
       <button
         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
         className="inline-block sm:hidden z-50">
