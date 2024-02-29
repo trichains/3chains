@@ -120,8 +120,7 @@ const Footer = () => {
         </Link>
 
         <div className="text-center">
-          Feito com <span style={{ color: '#8a63d2' }}>&hearts;</span>{' '}
-          <span className="text-accent">&hearts;💜</span> por{' '}
+          Feito com <span className="text-accent">❤</span> por{' '}
           <a href="https://trichains.dev" className="underline">
             trichains
           </a>
