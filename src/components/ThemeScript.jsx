@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 const ThemeScript = () => {
   return (
-    <Script id="theme-switcher" strategy="beforeInteractive">
+    <Script id="theme-switcher">
       {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark')
   } else {
