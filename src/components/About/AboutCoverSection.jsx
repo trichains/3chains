@@ -15,7 +15,7 @@ const AboutCoverSection = () => {
           alt="trichains"
           className="w-4/5 xs:w-3/4 md:w-full h-full object-contain object-center"
           priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+          sizes="(max-width: 768px) 100vw,(max-width: 1180px) 50vw, 50vw"
         />
       </div>
 

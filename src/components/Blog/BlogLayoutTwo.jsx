@@ -5,7 +5,9 @@ import { ptBR } from 'date-fns/locale';
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="group grid grid-cols-12 gap-4 items-center text-dark dark:text-lightText">
+    <div
+      className="group grid grid-cols-12 gap-4 items-center
+      text-dark dark:text-lightText">
       <Link
         href={blog.url}
         className="col-span-12 lg:col-span-4 h-full rounded-xl overflow-hidden flex">
@@ -17,7 +19,7 @@ const BlogLayoutOne = ({ blog }) => {
           width={blog.image.width}
           height={blog.image.height}
           className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
-          sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw,(max-width: 1024px) 50vw, 33vw"
         />
       </Link>
 
