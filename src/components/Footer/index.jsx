@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="flex flex-col items-center">
       <div
         className="flex flex-col text-center items-center
-        bg-darkSurface text-accentText
+        bg-darkSurface text-lightText
         mt-16 m-2 sm:m-0 rounded-2xl sm:rounded-none">
         <h3 className="mt-16 font-medium dark:font-bold capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
           Histórias | Notícias <br className="sm:hidden" />{' '}
@@ -46,13 +46,13 @@ const Footer = () => {
             placeholder="Seu melhor e-mail"
             ref={register}
             {...register('email', { required: true, maxLength: 80 })}
-            className="w-full bg-transparent pl-2 sm:pl-0 text-dark dark:text-light focus:border-gray focus:ring-0 border-0 border-b mr-2 pb-1"
+            className="w-full bg-transparent pl-2 sm:pl-0 text-dark dark:text-lightText focus:border-gray focus:ring-0 border-0 border-b mr-2 pb-1"
           />
 
           <input
             type="submit"
             className="bg-darkSurface dark:bg-accentDark
-            text-light dark:text-dark
+            text-lightText dark:text-dark
             cursor-pointer font-medium rounded
             px-3 sm:px-5 py-1"
           />
@@ -105,7 +105,7 @@ const Footer = () => {
 
       <div
         className="w-full relative font-medium bg-light dark:bg-dark
-        border-t border-solid border-light dark:border-darkGray text-dark dark:text-light
+        border-t border-solid border-light dark:border-darkGray text-dark dark:text-lightText
         py-6 px-8 flex flex-col md:flex-row items-center justify-between">
         <span className="text-center">
           &copy; 2024 - 3chains.

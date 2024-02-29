@@ -73,7 +73,7 @@ export default function BlogPage({ params }) {
             link={`/categorias/${slug(blog.tags[0])}`}
             className="px-6 text-sm py-2"
           />
-          <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl leading-normal relative w-5/6">
+          <h1 className="inline-block mt-6 font-semibold capitalize text-lightText text-2xl md:text-3xl lg:text-5xl leading-normal relative w-5/6">
             {blog.title}
           </h1>
         </div>
@@ -98,7 +98,7 @@ export default function BlogPage({ params }) {
           <details
             className="rounded-lg p-4 sticky top-20 max-h-[80vh]
             overflow-hidden overflow-y-auto
-            text-dark dark:text-light
+            text-dark dark:text-lightText
             bg-light dark:bg-darkSurface
             shadow shadow-dark/40
             transition-all ease duration-300
@@ -136,7 +136,7 @@ export default function BlogPage({ params }) {
                       <span
                         className="hover:underline hover:underline-offset-2
                         hover:decoration-accent
-                        hover:text-black dark:hover:text-accentDark
+                        hover:text-black dark:hover:text-white
                         hover:font-semibold
                         transition-all ease duration-300">
                         {heading.text}

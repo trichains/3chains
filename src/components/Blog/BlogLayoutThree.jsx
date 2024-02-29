@@ -6,7 +6,7 @@ import { ptBR } from 'date-fns/locale';
 
 const BlogLayoutThree = ({ blog }) => {
   return (
-    <div className="group flex flex-col items-center text-dark dark:text-light">
+    <div className="group flex flex-col items-center text-dark dark:text-lightText">
       <Link href={blog.url} className="h-full rounded-xl overflow-hidden">
         <Image
           src={blog.image.filePath.replace('../public', '')}

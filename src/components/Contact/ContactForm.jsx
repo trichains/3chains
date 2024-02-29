@@ -47,7 +47,7 @@ export default function ContactForm() {
       <input
         type="submit"
         value="Enviar"
-        className="mt-8 font-medium inline-block capitalize text-xl py-3 px-8 border-2 border-solid border-dark rounded cursor-pointer hover:bg-dark hover:text-light hover:scale-105 transition-all ease duration-200"
+        className="mt-8 font-medium inline-block capitalize text-xl py-3 px-8 border-2 border-solid border-dark rounded cursor-pointer hover:bg-dark hover:text-lightText hover:scale-105 transition-all ease duration-200"
       />
     </form>
   );

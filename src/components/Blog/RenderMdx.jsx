@@ -12,14 +12,14 @@ const RenderMdx = ({ blog }) => {
   return (
     <div
       className="max-w-max col-span-12 lg:col-span-8
-      font-in text-dark dark:text-light
+      font-in text-dark dark:text-lightText
       prose sm:prose-base md:prose-lg
       prose-blockquote:not-italic prose-blockquote:rounded-r-lg
       prose-headings:scroll-mt-20
       prose-blockquote:p-2 prose-blockquote:px-6 
 
       prose-blockquote:bg-accent/20 
-      prose-blockquote:border-accentBg
+      prose-blockquote:border-darkSurface
       prose-li:marker:text-accent
       
       dark:prose-invert

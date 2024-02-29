@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 py-2 px-5 sm:px-10 flex flex-row-reverse sm:flex-row items-center justify-between text-blackBlue dark:text-light bg-light dark:bg-dark border-b border-blueGray dark:border-darkGray z-50">
+    <header className="fixed w-full top-0 py-2 px-5 sm:px-10 flex flex-row-reverse sm:flex-row items-center justify-between text-blackBlue dark:text-lightText bg-light dark:bg-dark border-b border-lightGray dark:border-darkGray z-50">
       <button
         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
         className="inline-block sm:hidden z-50">
@@ -68,29 +68,29 @@ const Header = () => {
 
       {/* navbar no celular */}
       <nav
-        className={`absolute left-0 w-[30%] top-0 pt-14 pb-4 px-4 bg-dark/90 dark:bg-light/90 text-light dark:text-dark backdrop-blur-sm z-0 gap-2 font-medium capitalize sm:hidden flex flex-col items-start justify-center transition-all duration-300 ${
+        className={`absolute left-0 w-[35%] top-0 pt-14 pb-4 bg-dark/90 dark:bg-light/90 text-lightText dark:text-dark backdrop-blur-sm z-0 gap-1 font-medium capitalize sm:hidden flex flex-col items-start justify-center transition-all duration-300 ${
           click ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
         }`}>
         <Link
           href="/"
-          className="p-2 hover:bg-accentBg hover:text-light  transition-all ease duration-200">
+          className="w-full pl-6 py-2 hover:bg-darkSurface hover:text-lightText  transition-all ease duration-200">
           Início
         </Link>
-        <hr className=" border-b border-solid border-darkGray" />
+        <hr className="border-b border-solid border-darkGray" />
         <Link
           href="/sobre"
-          className="p-2 hover:bg-accentBg hover:text-light transition-all ease duration-200">
+          className="w-full pl-6 py-2 hover:bg-darkSurface hover:text-lightText transition-all ease duration-200">
           Sobre
         </Link>
-        <hr className=" border-b border-solid border-darkGray" />
+        <hr className="border-b border-solid border-darkGray" />
         <Link
           href="/contato"
-          className="p-2 hover:bg-accentBg hover:text-light transition-all ease duration-200">
+          className="w-full pl-6 py-2 hover:bg-darkSurface hover:text-lightText transition-all ease duration-200">
           Contato
         </Link>
       </nav>
 
-      <nav className="w-max py-3 px-8 text-dark dark:text-light font-medium capitalize hidden sm:flex items-center">
+      <nav className="w-max py-3 px-8 text-dark dark:text-lightText font-medium capitalize hidden sm:flex items-center">
         <Link href="/" className="mr-2">
           Início
         </Link>

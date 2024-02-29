@@ -3,7 +3,7 @@ import Category from './Category';
 
 const Categories = ({ categories, currentSlug }) => {
   return (
-    <div className="flex flex-wrap items-start px-20 mt-10 border-t-2 text-dark border-b-2 border-solid border-blueGray py-4 font-medium mx-10">
+    <div className="flex flex-wrap items-start px-20 mt-10 border-t-2 text-dark border-b-2 border-solid border-lightGray dark:border-darkGray py-4 font-medium mx-10">
       {categories.map((cat) => (
         <Category
           key={cat}
