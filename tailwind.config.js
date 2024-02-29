@@ -9,8 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: '#171617',
-        darkBlue: '#1a1825',
+        dark: '#1a1825',
         darkGray: '#6e698633',
         light: '#deddf4',
         gray: '#918daa',
@@ -18,7 +17,7 @@ module.exports = {
         accent: '#85e',
         accentDark: '#c4a7e7',
         accentBg: '#252239',
-        accentSurface: '#201d2f',
+        darkSurface: '#201d2f',
         accentText: '#E3D6FF'
       },
       fontFamily: {

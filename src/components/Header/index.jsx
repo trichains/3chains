@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 py-2 px-5 sm:px-10 flex flex-row-reverse sm:flex-row items-center justify-between text-blackBlue dark:text-light bg-light dark:bg-darkBlue border-b border-blueGray dark:border-darkGray z-50">
+    <header className="fixed w-full top-0 py-2 px-5 sm:px-10 flex flex-row-reverse sm:flex-row items-center justify-between text-blackBlue dark:text-light bg-light dark:bg-dark border-b border-blueGray dark:border-darkGray z-50">
       <button
         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
         className="inline-block sm:hidden z-50">
@@ -35,9 +35,7 @@ const Header = () => {
           <div className="relative">
             <span
               className={`absolute top-0 left-0 inline-block w-full h-0.5 rounded transition-all ease duration-200 ${
-                click
-                  ? 'bg-light dark:bg-darkBlue'
-                  : 'bg-darkBlue dark:bg-light'
+                click ? 'bg-light dark:bg-dark' : 'bg-dark dark:bg-light'
               }`}
               style={{
                 transform: click
@@ -47,7 +45,7 @@ const Header = () => {
               &nbsp;
             </span>
             <span
-              className="absolute top-0 left-0 inline-block w-full h-0.5 bg-darkBlue dark:bg-light rounded transition-all ease duration-200"
+              className="absolute top-0 left-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
               style={{
                 opacity: click ? 0 : 1
               }}>
@@ -55,9 +53,7 @@ const Header = () => {
             </span>
             <span
               className={`absolute top-0 left-0 inline-block w-full h-0.5 rounded transition-all ease duration-200 ${
-                click
-                  ? 'bg-light dark:bg-darkBlue'
-                  : 'bg-darkBlue dark:bg-light'
+                click ? 'bg-light dark:bg-dark' : 'bg-dark dark:bg-light'
               }`}
               style={{
                 transform: click
@@ -72,7 +68,7 @@ const Header = () => {
 
       {/* navbar no celular */}
       <nav
-        className={`absolute left-0 w-[30%] top-0 pt-14 pb-4 px-4 bg-darkBlue/90 dark:bg-light/90 text-light dark:text-darkBlue backdrop-blur-sm z-0 gap-2 font-medium capitalize sm:hidden flex flex-col items-start justify-center transition-all duration-300 ${
+        className={`absolute left-0 w-[30%] top-0 pt-14 pb-4 px-4 bg-dark/90 dark:bg-light/90 text-light dark:text-dark backdrop-blur-sm z-0 gap-2 font-medium capitalize sm:hidden flex flex-col items-start justify-center transition-all duration-300 ${
           click ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
         }`}>
         <Link
@@ -94,7 +90,7 @@ const Header = () => {
         </Link>
       </nav>
 
-      <nav className="w-max py-3 px-8 text-darkBlue dark:text-light font-medium capitalize hidden sm:flex items-center">
+      <nav className="w-max py-3 px-8 text-dark dark:text-light font-medium capitalize hidden sm:flex items-center">
         <Link href="/" className="mr-2">
           Início
         </Link>

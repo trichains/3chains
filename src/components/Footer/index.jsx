@@ -22,10 +22,11 @@ const Footer = () => {
     <footer className="flex flex-col items-center">
       <div
         className="flex flex-col text-center items-center
-        bg-accentSurface text-accentText
+        bg-darkSurface text-accentText
         mt-16 m-2 sm:m-0 rounded-2xl sm:rounded-none">
         <h3 className="mt-16 font-medium dark:font-bold capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
-          Histórias | Atualizações | Notícias
+          Histórias | Notícias <br className="sm:hidden" />{' '}
+          <span className="hidden sm:inline">|</span> Novidades | Dicas
         </h3>
 
         <p className="mt-5 px-4 text-center w-full sm:w-3/5 dark:font-medium text-sm sm:text-base">
@@ -37,7 +38,7 @@ const Footer = () => {
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="w-fit sm:min-w-[384px] flex items-stretch
-          bg-light dark:bg-darkBlue
+          bg-light dark:bg-dark
           mt-6 mx-4 p-1 sm:p-2 rounded">
           <input
             type="email"
@@ -45,12 +46,15 @@ const Footer = () => {
             placeholder="Seu melhor e-mail"
             ref={register}
             {...register('email', { required: true, maxLength: 80 })}
-            className="w-full bg-transparent pl-2 sm:pl-0 text-darkBlue dark:text-light focus:border-gray focus:ring-0 border-0 border-b mr-2 pb-1"
+            className="w-full bg-transparent pl-2 sm:pl-0 text-dark dark:text-light focus:border-gray focus:ring-0 border-0 border-b mr-2 pb-1"
           />
 
           <input
             type="submit"
-            className="bg-darkBlue dark:bg-light text-light dark:text-darkBlue cursor-pointer font-medium rounded px-3 sm:px-5 py-1"
+            className="bg-darkSurface dark:bg-accentDark
+            text-light dark:text-dark
+            cursor-pointer font-medium rounded
+            px-3 sm:px-5 py-1"
           />
         </form>
 
@@ -100,7 +104,7 @@ const Footer = () => {
       </div>
 
       <div
-        className="w-full relative font-medium bg-light dark:bg-darkBlue
+        className="w-full relative font-medium bg-light dark:bg-dark
         border-t border-solid border-light dark:border-darkGray text-dark dark:text-light
         py-6 px-8 flex flex-col md:flex-row items-center justify-between">
         <span className="text-center">
