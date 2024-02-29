@@ -30,7 +30,7 @@ const Header = () => {
       <Logo />
 
       {/* icone menu */}
-      <button className="inline-block sm:hidden z-50" onClick={toggle}>
+      <button className="inline-block sm:hidden z-50 w-6 h-6" onClick={toggle}>
         <div className="w-6 cursor-pointer transition-all ease duration-300">
           <div className="relative">
             <span
@@ -64,23 +64,24 @@ const Header = () => {
 
       {/* navbar no celular */}
       <nav
-        className="absolute right-0 bg-light/80 dark:bg-darkBlue text-dark dark:text-light backdrop:-blur-sm z-50 gap-3 py-1 font-medium capitalize sm:hidden flex flex-col transition-all ease duration-300 rounded-xl"
-        style={{
-          top: click ? '2.6rem' : '-100vh'
-        }}>
+        className={`absolute right-0 bg-light/80 dark:bg-accentSurface text-dark dark:text-light backdrop-blur-sm z-50 gap-1 py-1 font-medium capitalize sm:hidden flex flex-col transition-all duration-300 ${
+          click ? 'translate-y-24 opacity-100' : 'translate-y-full opacity-0'
+        }`}>
         <Link
           href="/"
-          className="w-full flex justify-center items-center mb-2 p-2 border-b border-solid border-dark hover:bg-accentBg hover:text-dark dark:hover:text-light transition-all ease duration-200 hover:scale-105 rounded shadow hover:shadow-black/40 hover:shadow-lg">
+          className="w-full flex justify-center items-center p-2 hover:bg-accentBg hover:text-light  transition-all ease duration-200">
           Início
         </Link>
+        <hr className="w-full border-b border-solid border-darkGray" />
         <Link
           href="/sobre"
-          className="w-full flex justify-center items-center mb-2 p-2 border-b border-solid border-dark hover:bg-accentBg hover:text-dark dark:hover:text-light transition-all ease duration-200 hover:scale-105 rounded shadow hover:shadow-black/40 hover:shadow-lg">
+          className="w-full flex justify-center items-center p-2 hover:bg-accentBg hover:text-light transition-all ease duration-200">
           Sobre
         </Link>
+        <hr className="w-full border-b border-solid border-darkGray" />
         <Link
           href="/contato"
-          className="w-full flex justify-center items-center mb-2 p-2 border-b border-solid border-dark hover:bg-accentBg hover:text-dark dark:hover:text-light transition-all ease duration-200 hover:scale-105 rounded shadow hover:shadow-black/40 hover:shadow-lg">
+          className="w-full flex justify-center items-center p-2 hover:bg-accentBg hover:text-light transition-all ease duration-200">
           Contato
         </Link>
       </nav>
