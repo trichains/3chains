@@ -22,8 +22,8 @@ const Footer = () => {
     <footer className="flex flex-col items-center">
       <div
         className="flex flex-col text-center items-center
-        bg-darkSurface text-lightText
-        mt-16 m-2 sm:m-0 rounded-2xl sm:rounded-none">
+        bg-darkSurface text-lightText w-full
+        mt-16 mx-2 rounded-2xl sm:rounded-none">
         <h3 className="mt-16 font-medium dark:font-bold capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
           Histórias | Notícias <br className="sm:hidden" />{' '}
           <span className="hidden sm:inline">|</span> Novidades | Dicas
@@ -31,6 +31,7 @@ const Footer = () => {
 
         <p className="mt-5 px-4 text-center w-full sm:w-3/5 dark:font-medium text-sm sm:text-base">
           Inscreva-se para saber mais sobre novas tecnologias e atualizações.
+          <br />
           Junte-se a mais de 5000+ membros da comunidade para se manter
           atualizado com as últimas notícias.
         </p>

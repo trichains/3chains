@@ -6,9 +6,11 @@ const Category = ({ link = '#', name, active, ...props }) => {
     <Link
       href={link}
       className={cx(
-        'inline-block py-2 px-10 rounded-full shadow border-2 border-solid border-dark hover:shadow-black/40 hover:shadow-lg hover:bg-dark hover:text-lightText hover:scale-105 transition-all ease duration-200 m-2',
+        'inline-block py-1.5 md:py-2 px-6 md:px-10 rounded-full shadow hover:shadow-black/40 hover:shadow-lg hover:bg-black dark:hover:bg-black hover:text-light dark:hover:text-light hover:scale-105 transition-all ease duration-200 m-2',
         props.className,
-        active ? 'bg-darkSurface text-accentText' : 'bg-light text-dark'
+        active
+          ? 'bg-accentText dark:bg-accentDark dark:text-dark'
+          : 'bg-darkGray dark:bg-darkSurface text-dark dark:text-lightText'
       )}>
       #{name}
     </Link>

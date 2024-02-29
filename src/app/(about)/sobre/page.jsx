@@ -12,12 +12,16 @@ export default function About() {
     <>
       <AboutCoverSection />
       <Skills />
-      <h2 className="mt-8 font-semibold text-2xl self-start mx-20 text-dark">
-        Tem um projeto em mente? Entre em contato comigo{' '}
+      <h2
+        className="text-lg md:text-2xl font-semibold text-center
+        mt-8 mx-5 xs:mx-10 sm:mx-12 md:mx-16 lg:mx-20
+        text-dark dark:text-lightText dark:font-normal">
+        Tem um projeto em mente? Entre em{' '}
         <Link
           href="/contato"
-          className="!underline underline-offset-2 hover:text-accent">
-          aqui
+          className="!underline underline-offset-2
+          text-accentDark hover:text-accentDark/80">
+          contato
         </Link>{' '}
         e vamos fazer acontecer. 🤝
       </h2>
