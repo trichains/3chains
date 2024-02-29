@@ -73,11 +73,14 @@ export default function BlogPage({ params }) {
             link={`/categorias/${slug(blog.tags[0])}`}
             className="px-6 text-sm py-2"
           />
-          <h1 className="inline-block mt-6 font-semibold capitalize text-light text-5xl leading-normal relative w-5/6">
+          <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl leading-normal relative w-5/6">
             {blog.title}
           </h1>
         </div>
-        <div className="absolute top-0 left-0 bottom-0 right-0 h-full bg-dark/50" />
+        <div
+          className="absolute top-0 left-0 bottom-0 right-0 h-full
+        bg-dark/60 dark:bg-dark/40"
+        />
         <Image
           src={blog.image.filePath.replace('../public', '')}
           placeholder="blur"
@@ -90,13 +93,23 @@ export default function BlogPage({ params }) {
       </div>
       <BlogDetails blog={blog} slug={params.slug} />
 
-      <div className="grid grid-cols-12 gap-16 mt-8 px-10">
-        <div className="col-span-4">
+      <div className="grid grid-cols-12 gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
+        <div className="col-span-12 lg:col-span-4">
           <details
-            className="text-dark rounded-lg p-4 sticky top-20 max-h-[80vh] overflow-hidden overflow-y-auto shadow shadow-dark/40"
+            className="rounded-lg p-4 sticky top-20 max-h-[80vh]
+            overflow-hidden overflow-y-auto
+            text-dark dark:text-light
+            bg-light dark:bg-darkSurface
+            shadow shadow-dark/40
+            transition-all ease duration-300
+            hover:shadow-lg hover:shadow-dark/40
+            dark:shadow-black/15
+            dark:hover:shadow-black/20
+            "
             open>
             <summary className="text-lg font-semibold capitalize cursor-pointer">
-              <span className="text-accent font-bold">S</span>umário
+              <span className="text-accent font-bold">S</span>
+              umário
             </summary>
             <ul className="mt-4 font-in text-base">
               {blog.toc.map((heading) => {
@@ -113,12 +126,19 @@ export default function BlogPage({ params }) {
                       data-[level=three]:pl-6
                       flex items-center justify-start">
                       {heading.level === 'three' ? (
-                        <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
+                        <span
+                          className="flex w-1 h-1 rounded-full
+                        bg-dark dark:bg-accentDark mr-2">
                           &nbsp;
                         </span>
                       ) : null}
 
-                      <span className="hover:underline hover:decoration-accent hover:underline-offset-2 transition-all ease duration-300">
+                      <span
+                        className="hover:underline hover:underline-offset-2
+                        hover:decoration-accent
+                        hover:text-black dark:hover:text-accentDark
+                        hover:font-semibold
+                        transition-all ease duration-300">
                         {heading.text}
                       </span>
                     </a>

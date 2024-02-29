@@ -63,9 +63,9 @@ code[data-line-numbers-max-digits='3'] > [data-line]::before {
 [data-rehype-pretty-code-title] {
   position: absolute;
   right: 0;
-  background-color: #437;
-  color: #e3d6ff;
-  padding: 4px 8px;
+  background-color: #85e;
+  color: #deddf4;
+  padding: 2px 8px;
   font-size: 1rem;
   border-end-start-radius: 4px;
 }
@@ -76,5 +76,5 @@ code[data-line-numbers-max-digits='3'] > [data-line]::before {
   width: 100%;
   text-align: center;
   font-size: 1rem;
-  color: #757478;
+  color: #918daa;
 }

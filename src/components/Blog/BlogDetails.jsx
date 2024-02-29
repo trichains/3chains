@@ -4,10 +4,11 @@ import { slug } from 'github-slugger';
 import Link from 'next/link';
 import ViewCounter from './ViewCounter';
 
-
 const BlogDetails = ({ blog, slug: blogSlug }) => {
   return (
-    <div className="flex items-center px-10 bg-accentBg text-accentText py-2 justify-around flex-wrap text-xl font-medium mx-10 rounded-lg">
+    <div
+      className="flex items-center px-2 md:px-10 bg-accentBg dark:bg-accentDark text-accentText
+      dark:text-dark py-2 justify-around flex-wrap text-lg sm:text-xl font-medium mx-5 md:mx-10 rounded-lg">
       <time className="m-3">
         {format(parseISO(blog.publishedAt), "d 'de' MMMM - yyyy ", {
           locale: ptBR
