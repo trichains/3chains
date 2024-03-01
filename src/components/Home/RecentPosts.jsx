@@ -14,7 +14,7 @@ const RecentPosts = ({ blogs }) => {
           Postagens
         </h2>
         <Link
-          href="/categorias/all"
+          href="/categorias/tudo"
           className="inline-block font-medium text-accent dark:text-accentDark underline underline-offset-2 text-base md:text-lg">
           Ver mais
         </Link>
