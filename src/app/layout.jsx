@@ -5,6 +5,7 @@ import Header from '@/src/components/Header';
 import Footer from '../components/Footer';
 import siteMetadata from '../utils/siteMetaData';
 import ThemeScript from '../components/ThemeScript';
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
         )}>
         <ThemeScript />
         <Header />
+        <Analytics />
         {children}
         <Footer />
       </body>
